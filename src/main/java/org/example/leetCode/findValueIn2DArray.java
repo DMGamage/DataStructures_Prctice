@@ -1,2 +1,15 @@
-package org.example.leetCode;public class findValueIn2DArray {
+package org.example.leetCode;
+
+public class findValueIn2DArray {
+
+    private boolean findValue(int[][] matrix , int target){
+        int i = matrix.length;
+        int j =0;
+        while(i<=0 && j < matrix[0].length){
+            if(matrix[i][j]<target) i--;
+                    else if (matrix[i][j] > target) j++;
+                    else return true;
+        }
+        return false;
+    }
 }
